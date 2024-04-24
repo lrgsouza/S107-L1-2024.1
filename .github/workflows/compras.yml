@@ -29,7 +29,7 @@ jobs:
         cache: maven
     - name: Testing with Maven
       run: |
-        cd Aula-GitHub-Actions
+        cd aula-github-actions
         mvn clean test site
   build:
     needs: test
@@ -45,5 +45,5 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: |
-        cd Aula-GitHub-Actions
+        cd aula-github-actions
         mvn clean install
