@@ -11,12 +11,12 @@ pipeline {
                 sh "mvn --version"
                 sh "java --version"
                 sh '''
-                   cd Aula-GitHub-Actions
+                   cd aula-github-actions
                    mvn clean install
                    cd ${WORKSPACE}
                    ls
                    '''
-                   archiveArtifacts 'Aula-GitHub-Actions/target/'
+                   archiveArtifacts 'aula-github-actions/target/'
 
             }
 
@@ -27,7 +27,7 @@ pipeline {
             steps {
                 echo 'Testing...'
                 sh '''
-                   cd Aula-GitHub-Actions
+                   cd aula-github-actions
                    mvn clean test site
                    '''
             }
